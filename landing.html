@@ -1,0 +1,119 @@
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <meta name="description" content="лендинг, созданный для портфолио Берсенёвым Ильёй под псевдонимом RESSIVAGER">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="landingStylesheet.css">
+    <link rel="icon" sizes="16x16" href="favicon16.ico"> 
+    <link rel="icon" sizes="32x32" href="favicon32.ico">
+    <link rel="icon" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+    <header>
+        <div class="flex-container">
+            <div id="logo">RESSIVAGE</div>
+            <div><a href="#slide1">обо мне</a></div>
+            <div><a href="#slide2">моя работа</a></div>
+            <div><a href="#slide3">почему я</a></div>
+            <div><a href="#slide4">мои услуги</a></div>
+            <div><a href="#slide5">как связаться</a></div>
+        </div>
+    </header>
+
+    <div class="wrapper-cutter">
+        <div class="main-wrapper">
+        <section descr="Что я за человек?" id="slide1">
+            <br>
+            <h1>обо мне</h1>
+            
+            <p><img src="placeholder.svg" alt="плейсхолдер">Меня зовут Берсенёв Илья. Я родился в Кунгуре, Пермском крае, сейчас живу в Перми. Я занимаюсь программированием уже 3 года, быстро развиваюсь и стремлюсь постоянно познавать новое. Работаю под псевдонимом ressivage и ressivager. Обладаю такими качествами, как:</p>
+            <ul>
+                <li>пунктуальность</li>
+                <li>коммуникабельность</li>
+                <li>стрессоустойчивость</li>
+                <li>честность</li>
+            </ul>
+        </section>
+        <section descr="Как я работаю?" id="slide2">
+            <br>
+            <h1>Мой подход к работе</h1>
+            <p>
+                <img src="placeholder.svg" alt="плейсхолдер">
+                Я работаю, беря заказы на создание лендингов и сайтов магазинов. Сначала вы предоставляете мне макет или схематичное изображение элементов на сайте, рассказываете, сколько нужно сделать экранов и предоставляете ресурсы, которые нужно разместить на сайте. Я же, в свою очередь, пишу код и по окончании работы высылаю его вам, при необходимости рассказываю, как запустить сайт.
+            </p>
+        </section>
+        <section descr="Почему именно я?" id="slide3">
+            <br>
+            <h1>что отличает меня от других исполнителей</h1>
+            
+            <p>ну деньги блин нужны понимаете очень нужны деньги дайте пожалста 
+                Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+                <img src="placeholder.svg" alt="плейсхолдер"></p>
+        </section>
+        <section descr="перечень услуг" id="slide4">
+            <br>
+            <h1>мои услуги</h1>
+            
+            
+        </section>
+        <section descr="Как со мной связаться?" id="slide5">
+            <br>
+            <h1>средства связи со мной</h1>
+            
+            <ul>
+                <img src="placeholder.svg" alt="плейсхолдер">
+                <li>вк</li>
+                <li>почта</li>
+                <li>телега</li>
+            </ul>
+        </section>
+
+        <footer>
+            ну все права зарегистрированы кароч
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+'use strict'
+let sections = document.getElementsByTagName('section');
+for(let i=0; i<sections.length; i++){sections[i].classList.add('hidden'); sections[i].classList.add('animated')}
+
+let imgs = document.getElementsByTagName('img')
+console.log("imgs")
+console.log(imgs)
+for(let i=0; i<imgs.length; i++){
+    imgs[i.toString()].classList.add("loading-animation"); 
+}
+
+
+let loadingResources = document.getElementsByClassName('loading-animation')
+for(let i=0; i<loadingResources.length; i+=1){
+    loadingResources[i.toString()].addEventListener("load", function(event){
+        
+        console.log("|",loadingResources, i, i.toString(), event.target);
+        event.target.classList.remove("loading-animation"); 
+        
+    })
+}
+
+function onEntry(entry) {
+    entry.forEach(change => {
+    if (change.isIntersecting) {
+        change.target.classList.remove('hidden') ;
+    }
+    });
+}
+let options = { threshold: [0.3] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.animated');
+for (let elm of elements) {
+    observer.observe(elm);
+}
+
+</script>
+</body>
+</html>
