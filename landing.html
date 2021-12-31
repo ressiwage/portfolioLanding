@@ -82,6 +82,18 @@
 let sections = document.getElementsByTagName('section');
 for(let i=0; i<sections.length; i++){sections[i].classList.add('hidden'); sections[i].classList.add('animated')}
 
+
+for(let i=0; i<sections.length; i++){ //на первую секцию и так всё работает
+    let h1 = sections[i.toString()].getElementsByTagName('h1')
+    console.log(h1)
+    h1 = h1.length >= 1 ? h1 : 0; //защита от андефайнед
+    let anchor = document.createElement("p");
+    anchor.innerHTML=" ";
+    h1[0].before(anchor)
+    
+
+}
+
 let imgs = document.getElementsByTagName('img')
 console.log("imgs")
 console.log(imgs)
