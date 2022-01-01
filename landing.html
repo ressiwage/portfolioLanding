@@ -16,11 +16,11 @@
     <header>
         <div class="flex-container">
             <div id="logo">RESSIVAGE</div>
-            <div><a href="#slide1">обо мне</a></div>
-            <div><a href="#slide2">моя работа</a></div>
-            <div><a href="#slide3">почему я</a></div>
-            <div><a href="#slide4">мои услуги</a></div>
-            <div><a href="#slide5">как связаться</a></div>
+            <div><a id="button-me" href="#slide1">обо мне</a></div>
+            <div><a id="button-my_work" href="#slide2">моя работа</a></div>
+            <div><a id="button-why" href="#slide3">почему я</a></div>
+            <div><a id="button-services" href="#slide4">мои услуги</a></div>
+            <div><a id="button-contacts" href="#slide5">как связаться</a></div>
         </div>
     </header>
 
@@ -81,7 +81,7 @@ let sections = document.getElementsByTagName('section');
 for(let i=0; i<sections.length; i++){sections[i].classList.add('hidden'); sections[i].classList.add('animated')}
 
 
-for(let i=0; i<sections.length; i++){ //на первую секцию и так всё работает
+for(let i=0; i<sections.length; i++){ 
     let h1 = sections[i.toString()].getElementsByTagName('h1')
     console.log(h1)
     h1 = h1.length >= 1 ? h1 : 0; //защита от андефайнед
@@ -113,7 +113,7 @@ for(let i=0; i<loadingResources.length; i+=1){
 function onEntry(entry) {
     entry.forEach(change => {
     if (change.isIntersecting) {
-        change.target.classList.remove('hidden') ;
+        change.target.classList.remove('hidden');
     }
     });
 }
