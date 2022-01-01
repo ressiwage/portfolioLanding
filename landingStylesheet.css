@@ -74,8 +74,8 @@ section h1{
 /*десктоп стили*/
 :root{
     --maincol: #FFEAD0;
-    --seccol: #122C34;
-    --headscol: #0C1B33;
+    --seccol: #3A3335;
+    --headscol: #3A3335;
     --headercol: #3993DD;
     font-size: var(--fsize);
     --fsize: 20px;
@@ -105,7 +105,7 @@ body{
 .flex-container * a,
 .flex-container * a:visited{
     font-size: calc(0.5em + 0.75vw);
-    border-radius: .25em;
+    border-radius: .125em;
     background-color: rgba(0,0,0,0);
     color: var(--seccol);
     display: block;
@@ -170,6 +170,7 @@ p,li{
 #logo{
     text-shadow: 0 1em 1em 0;
     font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-Bold.ttf')  format('truetype');
     animation: slowflow 5s linear infinite alternate;
     z-index:100;
     font-size: calc(10vw / 7);
